@@ -93,13 +93,11 @@ const ContactEmail = () => {
                             ></textarea>
                         </div>
                         <div className="d-flex justify-content-end">
-                            <button type="submit" className="btn btn-primary ">Send</button>
+                            <button type="submit" className="btn btn-secondary">Send</button>
                         </div>
                     </form>
                 </div>
             </div>
-
-
         </div>
     );
 };

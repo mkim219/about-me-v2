@@ -8,7 +8,11 @@ const OapElectionPromotion = () => {
                     <h2>Election Promotion Feature</h2>
                 </div>
                 <div className="card-body">
-                    <h3>Overview</h3>
+                    <div className="row mb-2">
+                        <img src={require('../assets/demo/election-demo.png')}/>
+                    </div>
+                    <h3>Overview<span className="mx-1 h5"><a href="https://ominous.app/election" target="_blank"><i
+                        className="fa-solid fa-link"></i></a></span></h3>
                     <p>The Election feature facilitates user promotions through a community voting system. It replaces
                         the previous manual promotion process by admins, encouraging user participation and
                         engagement.</p>

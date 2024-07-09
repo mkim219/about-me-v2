@@ -8,7 +8,9 @@ const CleantopiaExcelConverter = () => {
                     <h2>Cleantopia Excel Converter</h2>
                 </div>
                 <div className="card-body">
-                    <h3>Overview</h3>
+                    <h3>Overview<span className="mx-1 h5"><a
+                        href="https://github.com/mkim219/Cleantopia-excel-convert-GUI" target="_blank"><i
+                        className="fa-brands fa-github"></i></a></span></h3>
                     <p>The Cleantopia Excel Converter is a desktop application designed to assist Cleantopia in
                         generating labels for customer clothes. This application simplifies the process of extracting
                         necessary customer information from CSV files and converting it into a format suitable for label

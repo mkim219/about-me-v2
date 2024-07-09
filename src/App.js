@@ -2,21 +2,21 @@ import './App.css';
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { TypeAnimation } from 'react-type-animation';
+import Modal from "react-modal";
+
 import Cleantopia from "./assets/Cleantopia/cleantopia-main-photo.gif"
 import EngineX from "./assets/EngineX/Picture1.png"
 import ContactEmail from "./ContactEmail";
 import ProjectModalTab from "./ProjectModalTab";
-import Modal from "react-modal";
 import CleantopiaExcelConverter from "./project/Cleantopia-excel-converter";
 import EngineXCarRentalShop from "./project/EngineX-car-rental-shop";
+import resume from "./assets/Minsu-kim-resume.pdf"
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [modalOAPIsOpen, setModalOAPIsOpen] = useState(false);
   const [modalCleantopiaIsOpen, setModalCleantopiaIsOpen] = useState(false);
   const [modalEngineXIsOpen, setModalEngineXIsOpen] = useState(false);
-
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +68,7 @@ function App() {
 
   return (
       <div className="bg-dark text-light" id="home">
+        {/*header*/}
         <div
             className={classNames("bg-secondary bg-gradient sticky-top",
                 { "d-block": scrolled },
@@ -123,12 +124,10 @@ function App() {
                 <h1 className="display-3 title-h1">Minsu Kim</h1>
                 <h3 className="title-h3">An adventerous programmer involved in the startup scene</h3>
                 <ul className="nav">
-                  <li className="nav-item"><a className="nav-link" href="assets/resume.pdf" target="_blank"><i
+                  <li className="nav-item"><a className="nav-link" href={resume} target="_blank"><i
                       className="fa fa-file-pdf-o"></i></a></li>
                   <li className="nav-item"><a className="nav-link" href="tel:82-10-9731-9106"><i
                       className="fa fa-phone"></i></a></li>
-                  <li className="nav-item"><a className="nav-link" href="mailto:dev.minsukim@mysenenca.ca"><i
-                      className="fa fa-envelope-o"></i></a></li>
                   <li className="nav-item"><a className="nav-link"
                                               href="https://www.linkedin.com/in/minsu-kim-37a553156"
                                               target="_blank"><i className="fa fa-linkedin"></i></a></li>
@@ -153,13 +152,13 @@ function App() {
                 <TypeAnimation
                     className="lato-thin"
                     sequence={[
-                      'I am developer', // Types 'One'
+                      'I am a developer', // Types 'One'
                       1000, // Waits 1s
-                      'I am creative developer', // Deletes 'One' and types 'Two'
+                      'I am a creative developer', // Deletes 'One' and types 'Two'
                       2000, // Waits 2s
-                      'I am enthusiast developer', // Types 'Three' without deleting 'Two'
+                      'I am a collaborative developer', // Types 'Three' without deleting 'Two'
                       2000, // Waits 2s
-                      'I am full stack developer', // Types 'Three' without deleting 'Two'
+                      'I am a full stack developer', // Types 'Three' without deleting 'Two'
                       () => {
                         console.log('Sequence completed');
                       },
@@ -199,7 +198,9 @@ function App() {
                 <div className="card-body">
                   <h5 className="card-title">Ontario Abandoned Place</h5>
                   <p className="card-text">Discover abandoned building, ghost towns, industrials, farm houses, mansions, creepy places, and more</p>
-                  <button onClick={openModalOAP} className="btn btn-primary">Detail</button>
+                  <div className="d-flex justify-content-end">
+                    <button onClick={openModalOAP} className="btn btn-secondary">Detail</button>
+                  </div>
                   <Modal
                       isOpen={modalOAPIsOpen}
                       onRequestClose={closeModal}
@@ -225,7 +226,9 @@ function App() {
                 <div className="card-body">
                   <h5 className="card-title">Cleantopia Execl converter</h5>
                   <p className="card-text">Desktop application developed to streamline label generation by converting CSV file data into labels with user friendly graphical user interface</p>
-                  <button onClick={openModalCleantopia} className="btn btn-primary">Detail</button>
+                  <div className="d-flex justify-content-end">
+                    <button onClick={openModalCleantopia} className="btn btn-secondary">Detail</button>
+                  </div>
                   <Modal
                       isOpen={modalCleantopiaIsOpen}
                       onRequestClose={closeModal}
@@ -250,7 +253,9 @@ function App() {
                 <div className="card-body">
                   <h5 className="card-title">EngineX Car Rental Shop</h5>
                   <p className="card-text">web application platform connects car owners with individuals looking to rent vehicles. It provides a seamless rental service </p>
-                  <button onClick={openModalEngineX} className="btn btn-primary">Detail</button>
+                  <div className="d-flex justify-content-end">
+                      <button onClick={openModalEngineX} className="btn btn-secondary">Detail</button>
+                  </div>
                   <Modal
                       isOpen={modalEngineXIsOpen}
                       onRequestClose={closeModal}

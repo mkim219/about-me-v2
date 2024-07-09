@@ -1,4 +1,5 @@
 import React from 'react';
+import fuzzySearchingDemo from "../assets/demo/fuzzy-searching-demo.gif";
 
 const OapFuzzySearching = () => {
     return (
@@ -8,7 +9,11 @@ const OapFuzzySearching = () => {
                     <h2>Fuzzy Searching Feature</h2>
                 </div>
                 <div className="card-body">
-                    <h3>Overview</h3>
+                    <div className="row mb-2">
+                        <img src={fuzzySearchingDemo} alt="advanced map demo in OAP with admin account"/>
+                    </div>
+                    <h3>Overview <span className="mx-1 h5"><a href="https://ominous.app/" target="_blank"><i
+                        className="fa-solid fa-link"></i></a></span></h3>
                     <p>The Fuzzy Searching feature provides a robust global search capability, allowing users to find
                         specific locations by browsing through countries, states, counties, sub-counties, and locations.
                         The feature also supports partial searches to enhance user experience.</p>

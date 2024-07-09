@@ -1,4 +1,5 @@
 import React from 'react';
+import advancedMapDemo from '../assets/demo/advanced-map-demo.gif'
 
 const OAPAdvancedMap = () => {
     return (
@@ -8,6 +9,9 @@ const OAPAdvancedMap = () => {
                     <h2>Advanced Map Feature</h2>
                 </div>
                 <div className="card-body">
+                    <div className="row mb-2">
+                        <img src={advancedMapDemo} alt="advanced map demo in OAP with admin account"/>
+                    </div>
                     <h3>Overview</h3>
                     <p>The Map feature is a Single Page Application (SPA) that allows users to interact with geographic
                         data. It provides authenticated access, location filtering, and user-tier specific
