@@ -1,7 +1,7 @@
 {
   "name": "about-me",
   "version": "0.1.0",
-  "homepage": "https://devminsu.com",
+  "homepage": "https://mkim219.github.io/about-me-v2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
